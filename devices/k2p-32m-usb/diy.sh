@@ -1,7 +1,6 @@
-rm -rf target/linux/ramips
-svn co https://github.com/x-wrt/x-wrt/trunk/target/linux/ramips target/linux/ramips
 
-sed -i 's?admin/status/channel_analysis??' package/feeds/luci/luci-mod-status/root/usr/share/luci/menu.d/luci-mod-status.json
+rm -rf package/network/services/ppp
+svn co https://github.com/openwrt/openwrt/trunk/package/network/services/ppp
 
 sed -i 's/PKG_VERSION:=1/PKG_VERSION:=2/' package/feeds/custom/luci-app-bypass/Makefile
 
